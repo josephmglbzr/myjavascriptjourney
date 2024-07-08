@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+        body{
+            background: #1b1b32;
+            color: #fff;
+        }
+        .date{
+            text-align: center;
+            padding: 20px;
+        }
+        .date select{
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            margin: 1em 0;
+        }
+        #date-display{
+            color: orange;
+            font-size: 1.5rem;
+            margin: 5em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="date">
+        <h1>Date Formatter</h1>
+        <select name="" id="select-date">
+            <option value="mm-dd-yy">Month, Day, Year</option>
+            <option value="dd-mm-yy">Day, Month, Year</option>
+            <option value="yy-mm-dd">Year, Month, Day</option>
+            <option value="yy-mm-dd-h-m">Month, Day, Year, Hours, Minutes</option>
+        </select>
+        <p id="date-display"></p>
+    </div>
+
+    <script>
+
+        const getDate = document.getElementById("date-display");
+        const selectDate = document.getElementById("select-date")
+
+        //create date object to create a constructor
+        const date = new Date();
+
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        const hour = date.getHours();
+        const minutes = date.getMinutes();
+
+        const defaultFormat = `${month}-${day}-${year}`;
+        getDate.textContent = defaultFormat;
+
+        selectDate.addEventListener("change", () => {
+            switch(selectDate.value){
+
+            case "dd-mm-yy": 
+                getDate.textContent = `${day}-${month}-${year}`;
+                break;
+
+            case "yy-mm-dd": 
+                getDate.textContent = `${year}-${month}-${day}`;
+                break;
+            
+            case "yy-mm-dd-h-m":
+                getDate.textContent = `${year}-${month}-${day} ${hour} Hours ${minutes} Minutes`;
+                break;
+            default:
+                getDate.textContent = defaultFormat;
+        }       
+        })
+       
+    </script>
+</body>
+</html>

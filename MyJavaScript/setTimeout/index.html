@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hello"></p>
+    <p id="date"></p>
+    <script>
+        //call the arguments after the designated amount of time is reached
+        setInterval(myDate, 1000);
+        setTimeout(newText, 5000);
+        function newText(){
+            document.getElementById('hello').innerHTML = "Hello World";
+        }
+        function myDate(){
+            let date = new Date().getFullYear();
+            document.getElementById('date').innerHTML = date;
+        }
+        
+    </script>
+</body>
+</html>

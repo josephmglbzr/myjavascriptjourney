@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    background: #1b1b32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    color: #fff;
+}
+.container{
+    text-align: center;
+}
+.card{
+    text-align: center;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card p{
+    margin: 0 0 2rem 0;
+}
+
+.input-con input{
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: 2rem;
+    width: 300px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+}
+.input-con button{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    background: orange;
+    border-radius: 2rem;
+    transition: .5s;
+    margin: 0 0 1rem 0;
+}
+.input-con button:hover{
+    color: #fff;
+    transition: .5s;
+    background: #6d4c0e;
+    cursor: pointer;
+}
+#result{
+    color: orange;
+}
